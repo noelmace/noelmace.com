@@ -210,6 +210,9 @@ textarea:required:invalid {
     display: flex;
     flex-direction: column;
   }
+  form > * {
+    margin: .5rem 0;
+  }
 }
 
 
