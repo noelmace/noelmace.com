@@ -45,11 +45,11 @@ class CardComponent extends HTMLElement {
       }
 
       img {
-        max-width: 100%;
         margin-bottom: 1rem;
         border-radius: 3px;
         padding: 1rem;
-        height: 120px;
+        height: 110px;
+        width: 110px;
       }
     `;
 
