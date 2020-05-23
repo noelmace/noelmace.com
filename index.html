@@ -115,9 +115,9 @@
         <h1>Contact</h1>
         <p>To get in touch fill the form below.</p>
         <form name="contactForm" method="POST" netlifyhoneypot="bot-field" data-netlify="true">
-          <label class="screen-reader-text">Don't fill this out if you're human: <input name="bot-field"/></label>
-          <input type="text" name="name" placeholder="Name" required/>
-          <input type="email" name="email" placeholder="Email" required/>
+          <label class="screen-reader-text">Don't fill this out if you're human: <input name="bot-field" /></label>
+          <input type="text" name="name" placeholder="Name" required />
+          <input type="email" name="email" placeholder="Email" required />
           <textarea name="message" placeholder="Message" rows="7" required></textarea>
           <div class="form-row"><img src="/images/asterisk.svg" height="10px" width="10px" /> Required fields</div>
           <div class="form-row"><button type="submit">Send Message</button></div>
@@ -126,6 +126,15 @@
       <section id="misc">
         <h1>Misc / Outdated</h1>
         <div class="cards-container">
+          <link-card
+            id="youtube"
+            href="https://tube.noelmace.com"
+            label="Youtube"
+            src="/images/youtube.svg"
+            alt="Noël Macé - Youtube"
+            title="Youtube"
+            subtitle="some conferences"
+          ></link-card>
           <link-card
             id="stackoverflow"
             href="https://stackoverflow.com/users/3744725/noelm"
@@ -136,21 +145,21 @@
             subtitle="@noelm"
           ></link-card>
           <link-card
+            id="sessionize"
+            href="https://sessionize.com/noelmace/"
+            src="/images/sessionize.png"
+            alt="Noël Macé - Speaker Profile @ Sessionize.com"
+            title="Sessionize"
+            subtitle="Speaker Profile"
+          ></link-card>
+          <link-card
             id="slideshare"
             href="https://fr.slideshare.net/noelmace"
             label="Slideshare"
             src="/images/slideshare.svg"
             alt="Noël Macé | Slideshare"
             title="Slideshare"
-            subtitle="Very old slides only!"
-          ></link-card>
-          <link-card
-            id="viadeo"
-            href="https://www.viadeo.com/p/002icti61tiq22j"
-            src="/images/viadeo.svg"
-            alt="Noël Macé | Viadeo"
-            title="Viadeo"
-            subtitle="I never go there!"
+            subtitle="very old slides"
           ></link-card>
         </div>
       </section>
