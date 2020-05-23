@@ -47,7 +47,6 @@ img {
 }
 
 html, body {
-  background: var(--main-bg);
   background-color: var(--color-lvl1);
 }
 
