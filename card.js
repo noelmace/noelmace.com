@@ -19,13 +19,13 @@ class CardComponent extends HTMLElement {
         width: 150px;
         border-radius: 3px;
         padding: 1rem;
-        background: #181818;
+        background: var(--color-lvl2);
         height: 100%;
-        box-shadow: 0 1px 1px 0 rgba(0,0,0, 0.14),0 2px 1px -1px rgba(0,0,0, 0.12),0 1px 3px 0 rgba(0,0,0, 0.2);
+        box-shadow: var(--shadow);
       }
 
       .container:hover {
-        background-color: #242424;
+        background-color: var(--color-lvl3);
         box-shadow: none;
       }
 
@@ -36,12 +36,12 @@ class CardComponent extends HTMLElement {
       }
 
       a {
-        color: #FFF;
+        color: var(--font-color);
         text-decoration: none;
       }
 
       a:hover {
-        color: #4183C4;
+        color: var(--link-color);
       }
 
       img {

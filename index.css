@@ -1,14 +1,13 @@
-html {
-  box-sizing: border-box;
-  background-color: #202020;
-}
-
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-  background-color: #202020;
-  background: url("/images/bg.png") repeat;
-  color: #FFF;
+:root {
   --font-size: 14px;
+  --ground-color: hsl(0,0%,5%);
+  --color-lvl1: hsl(0,0%,10%);
+  --color-lvl2: hsl(0,0%,15%);
+  --color-lvl3: hsl(0,0%,20%);
+  --link-color: #4183C4;
+  --main-bg: url("/images/bg.png") repeat;
+  --font-color: #fff;
+  --shadow: 0 1px 1px 0 rgba(0,0,0, 0.14),0 2px 1px -1px rgba(0,0,0, 0.12),0 1px 3px 0 rgba(0,0,0, 0.2);
 }
 
 *,
@@ -38,16 +37,31 @@ ul {
   list-style: none;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 img {
   max-width: 100%;
   height: auto;
 }
 
+html, body {
+  background: var(--main-bg);
+  background-color: var(--color-lvl1);
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
+  color: var(--font-color);
+  font-size: var(--font-size);
+}
+
 header {
   text-align: left;
   padding: .5rem 1rem;
-  background-color: #181818;
-  border-bottom: 1px solid #404040;
+  background-color: var(--color-lvl3);
+  border-bottom: 1px solid var(--color-lvl2);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -59,8 +73,8 @@ header h1 {
 }
 
 .profile {
-  height: 30px;
-  border-radius: 15px;
+  height: 32px;
+  border-radius: 16px;
 }
 
 main {
@@ -69,7 +83,7 @@ main {
 }
 
 section {
-  border: 1px solid #343434;
+  border: 1px solid var(--color-lvl2);
   padding: 2rem;
   text-align: center;
 }
@@ -109,8 +123,8 @@ label {
 }
 
 select, input, textarea, #contact button {
-  border: 1px solid hsl(0, 0%, 14%);
-  color: #FFF;
+  border: 1px solid var(--ground-color);
+  color: var(--font-color);
   border-radius: 3px;
   padding: 0.5em 10px;
   font-size: inherit;
@@ -123,7 +137,7 @@ select, input, textarea, #contact button {
 
 select, input, textarea {
   padding: 15px 10px;
-  background: hsl(0, 0%, 14%);
+  background: var(--ground-color);
   box-shadow: none;
 }
 
@@ -146,11 +160,11 @@ textarea:required:invalid {
 #contact button {
   padding: 1rem 2rem;
   font-weight: 600;
-  background-color: #181818;
+  background-color: var(--color-lvl2);
 }
 
 #contact button:hover {
-  background-color: #242424;
+  background-color: var(--color-lvl3);
 }
 
 .screen-reader-text {
