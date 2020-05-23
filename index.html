@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noël Macé</title>
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon/favicon.ico" />
+
+    <meta name="msapplication-TileColor" content="#333" />
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+    <meta name="theme-color" content="#121212" />
+
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <img src="favicon/favicon-32x32.png" alt="Noël Macé" class="profile" />
+      <h1>Noël Macé</h1>
+    </header>
+    <main>
+      <section id="social">
+        <h1>Social</h1>
+        <div class="cards-container">
+          <link-card
+            id="twitter"
+            href="https://twitter.com/noel_mace"
+            label="Twitter account"
+            src="/images/twitter.svg"
+            alt="Noël Macé (@noel_mace) / Twitter"
+            title="Twitter"
+            subtitle="@noel_mace"
+          ></link-card>
+          <link-card
+            id="linkedin"
+            href="https://linkedin.com/in/noel_mace"
+            label="LinkedIn page"
+            src="/images/linkedin.svg"
+            alt="Noël Macé | LinkedIn"
+            title="LinkedIn"
+            subtitle="/in/noelmace"
+          ></link-card>
+          <link-card
+            id="github"
+            href="https://github.com/noelmace"
+            label="GitHub accout"
+            src="/images/github.svg"
+            alt="Noël Macé (noelmace) | GitHub"
+            title="GitHub"
+            subtitle="@noelmace"
+          ></link-card>
+        </div>
+      </section>
+      <section id="projects">
+        <h1>Projects</h1>
+        <div class="cards-container">
+          <link-card
+            id="fullwebdev"
+            href="https://fullweb.dev"
+            label="FullWeb.dev"
+            src="/images/fullwebdev.png"
+            alt="FullWeb.dev"
+            title="FullWeb.dev"
+            subtitle="Modern Web Architecture & Development"
+          ></link-card>
+          <link-card
+            id="monocli"
+            href="https://github.com/noelmace/monocli"
+            label="Monocli"
+            src="/images/monocli.png"
+            alt="Monocli"
+            title="Monocli"
+            subtitle="One CLI to rule them all"
+          ></link-card>
+        </div>
+      </section>
+      <section id="writings">
+        <h1>Writings</h1>
+        <div class="cards-container">
+          <link-card
+            id="devto"
+            href="https://dev.to/noelmace"
+            label="Dev.to"
+            src="/images/devto.svg"
+            alt="Noël Macé - Dev"
+            title="DEV"
+            subtitle="Technical blogging"
+          ></link-card>
+          <link-card
+            id="medium"
+            href="https://medium.com/@noelm"
+            label="medium.com"
+            src="/images/medium.svg"
+            alt="Noël Macé - Medium"
+            title="Medium"
+            subtitle="Non technical blogging"
+          ></link-card>
+        </div>
+      </section>
+      <section id="contact">
+        <h1>Contact</h1>
+        <p>To get in touch fill the form below.</p>
+        <form name="contactForm" method="POST" netlifyhoneypot="bot-field" data-netlify="true">
+          <label class="screen-reader-text">Don't fill this out if you're human: <input name="bot-field"/></label>
+          <input type="text" name="name" placeholder="Name" required/>
+          <input type="email" name="email" placeholder="Email" required/>
+          <textarea name="message" placeholder="Message" rows="7" required></textarea>
+          <div class="form-row"><img src="/images/asterisk.svg" height="10px" width="10px" /> Required fields</div>
+          <div class="form-row"><button type="submit">Send Message</button></div>
+        </form>
+      </section>
+      <section id="misc">
+        <h1>Misc / Outdated</h1>
+        <div class="cards-container">
+          <link-card
+            id="stackoverflow"
+            href="https://stackoverflow.com/users/3744725/noelm"
+            label="Stack Overflow"
+            src="/images/stackoverflow.svg"
+            alt="User noelm - Stack Overflow"
+            title="Stack Overflow"
+            subtitle="@noelm"
+          ></link-card>
+          <link-card
+            id="slideshare"
+            href="https://fr.slideshare.net/noelmace"
+            label="Slideshare"
+            src="/images/slideshare.svg"
+            alt="Noël Macé | Slideshare"
+            title="Slideshare"
+            subtitle="Very old slides only!"
+          ></link-card>
+          <link-card
+            id="viadeo"
+            href="https://www.viadeo.com/p/002icti61tiq22j"
+            src="/images/viadeo.svg"
+            alt="Noël Macé | Viadeo"
+            title="Viadeo"
+            subtitle="I never go there!"
+          ></link-card>
+        </div>
+      </section>
+    </main>
+    <script src="card.js"></script>
+  </body>
+</html>
