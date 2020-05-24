@@ -1,8 +1,4 @@
 class CardComponent extends HTMLElement {
-  static get observedAttributes() {
-    return ['src'];
-  }
-
   constructor() {
     super();
 
@@ -44,10 +40,6 @@ class CardComponent extends HTMLElement {
         text-decoration: none;
       }
 
-      a:hover {
-        /* color: var(--link-color); */
-      }
-
       img, ::slotted(svg) {
         margin-bottom: 1rem;
         border-radius: 3px;
@@ -71,24 +63,7 @@ class CardComponent extends HTMLElement {
     `;
 
     shadowRoot.appendChild(container);
-
-    // const nodes = this.shadowRoot.querySelector('node')
-    // const assigned = nodes.assignedNodes();
-    // const svg = assigned[1];
-    // svg.setAttribute('role', 'img');
-    // svg.setAttribute('aria-label', this.alt);
-
   }
-
-  attributeChangedCallback(name, oldValue, newValue) {
-    if (name === 'src') {
-      const img = this.shadowRoot.querySelector('img');
-      if (img) {
-        img.src = this.src;
-      }
-    }
-  }
-
 
   get alt() {
     return this.getAttribute('alt') || 'Demo';
@@ -98,10 +73,7 @@ class CardComponent extends HTMLElement {
     return this.getAttribute('href') || '#';
   }
 
-  set src(newValue) {
-    this.setAttribute('src', newValue);
-  }
-
+  // see https://github.com/noelmace/noelmace.com/commit/c8c2a33e for theme color
   get src() {
     return this.getAttribute('src') || '/images/question-mark-white.svg';;
   }
