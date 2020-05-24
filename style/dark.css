@@ -1,5 +1,6 @@
 :root {
   --input-color: hsl(0,0%,5%);
+  --link-card-fill-color: #fff;
   --color-lvl0: hsl(0,0%,10%);
   --color-lvl1: hsl(0,0%,15%);
   --color-lvl2: hsl(0,0%,20%);

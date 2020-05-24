@@ -44,7 +44,7 @@ class CardComponent extends HTMLElement {
         /* color: var(--link-color); */
       }
 
-      img {
+      img, ::slotted(svg) {
         margin-bottom: 1rem;
         border-radius: 3px;
         padding: 1rem;
@@ -60,13 +60,20 @@ class CardComponent extends HTMLElement {
 
     container.innerHTML = /* HTML */ `
       <a href="${this.href}" aria-label="${this.label}" target="_blank" rel="noopener noreferrer">
-        <img src="${this.src}" alt="${this.alt}" />
+        <slot><img src="${this.colorScheme === 'light' ? this.src : this.srcNeg}" alt="${this.alt}" /></slot>
         <h1>${this.cardTitle}</h1>
         <h2>${this.cardSubTitle}</h2>
       </a>
     `;
 
     shadowRoot.appendChild(container);
+
+    // const nodes = this.shadowRoot.querySelector('node')
+    // const assigned = nodes.assignedNodes();
+    // const svg = assigned[1];
+    // svg.setAttribute('role', 'img');
+    // svg.setAttribute('aria-label', this.alt);
+
   }
 
   get alt() {
@@ -77,8 +84,16 @@ class CardComponent extends HTMLElement {
     return this.getAttribute('href') || '#';
   }
 
+  get srcNeg() {
+    return this.getAttribute('src-neg') || '/images/question-mark-dark.svg';
+  }
+
   get src() {
-    return this.getAttribute('src') || '/images/question-mark.svg';
+    return this.getAttribute('src') || '/images/question-mark-white.svg';;
+  }
+
+  get colorScheme() {
+    return this.getAttribute('color-scheme') || 'light';
   }
 
   get cardTitle() {
