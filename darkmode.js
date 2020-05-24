@@ -1,7 +1,7 @@
 (() => {
   const darkModeToggle = document.querySelector('dark-mode-toggle');
   const themeColor = document.querySelector('meta[name="theme-color"]');
-  const msTitleColor = document.querySelector('msapplication-TileColor');
+  const msTitleColor = document.querySelector('meta[name="msapplication-TileColor"]');
 
   const toggleTheme = (e) => {
     const darkModeOn = e.detail.colorScheme === 'dark' ? true : false;
