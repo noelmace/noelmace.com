@@ -1,4 +1,8 @@
 class CardComponent extends HTMLElement {
+  static get observedAttributes() {
+    return ['src'];
+  }
+
   constructor() {
     super();
 
@@ -60,7 +64,7 @@ class CardComponent extends HTMLElement {
 
     container.innerHTML = /* HTML */ `
       <a href="${this.href}" aria-label="${this.label}" target="_blank" rel="noopener noreferrer">
-        <slot><img src="${this.colorScheme === 'light' ? this.src : this.srcNeg}" alt="${this.alt}" /></slot>
+        <slot><img src="${this.src}" alt="${this.alt}" /></slot>
         <h1>${this.cardTitle}</h1>
         <h2>${this.cardSubTitle}</h2>
       </a>
@@ -76,6 +80,16 @@ class CardComponent extends HTMLElement {
 
   }
 
+  attributeChangedCallback(name, oldValue, newValue) {
+    if (name === 'src') {
+      const img = this.shadowRoot.querySelector('img');
+      if (img) {
+        img.src = this.src;
+      }
+    }
+  }
+
+
   get alt() {
     return this.getAttribute('alt') || 'Demo';
   }
@@ -84,8 +98,8 @@ class CardComponent extends HTMLElement {
     return this.getAttribute('href') || '#';
   }
 
-  get srcNeg() {
-    return this.getAttribute('src-neg') || '/images/question-mark-dark.svg';
+  set src(newValue) {
+    this.setAttribute('src', newValue);
   }
 
   get src() {

@@ -44,7 +44,7 @@
     <meta name="msapplication-TileColor" content="#333" />
     <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png" />
     <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-    <meta name="theme-color" content="#121212" />
+    <meta name="theme-color" content="#24292e" />
 
     <script>
       if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="/style/dark.css" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="/style/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)" />
     <link rel="stylesheet" href="/style/style.css" />
+    <script defer src="/darkmode.js"></script>
   </head>
   <body>
     <header>
@@ -194,7 +195,6 @@
             id="youtube"
             href="https://tube.noelmace.com"
             label="Youtube"
-            src="/images/youtube.svg"
             alt="No&euml;l Mac&eacute; - Youtube"
             title="Youtube"
             subtitle="some conferences"
@@ -225,6 +225,8 @@
             href="https://sessionize.com/noelmace/"
             src-neg="/images/sessionize-white.png"
             src="/images/sessionize-dark.png"
+            data-src-light="/images/sessionize-dark.png"
+            data-src-dark="/images/sessionize-white.png"
             alt="No&euml;l Mac&eacute; - Speaker Profile @ Sessionize.com"
             title="Sessionize"
             subtitle="Speaker Profile"
@@ -233,7 +235,6 @@
             id="slideshare"
             href="https://fr.slideshare.net/noelmace"
             label="Slideshare"
-            src="/images/slideshare.svg"
             alt="No&euml;l Mac&eacute; | Slideshare"
             title="Slideshare"
             subtitle="very old slides"
