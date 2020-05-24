@@ -1,13 +1,76 @@
 :root {
   --font-size: 14px;
-  --ground-color: hsl(0,0%,5%);
-  --color-lvl1: hsl(0,0%,10%);
-  --color-lvl2: hsl(0,0%,15%);
-  --color-lvl3: hsl(0,0%,20%);
-  --link-color: #4183C4;
   --main-bg: url("/images/bg.png") repeat;
-  --font-color: #fff;
+  --raise-1dp: 0 2px 1px -1px rgba(0,0,0,.2),0 1px 1px 0 rgba(0,0,0,.14),0 1px 3px 0 rgba(0,0,0,.12);
+  --raise-2dp: 0 3px 1px -2px rgba(0,0,0,.2),0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12);
+  --raise-4dp: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+  --raise-6dp: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
+  --raise-8dp: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
   --shadow: 0 1px 1px 0 rgba(0,0,0, 0.14),0 2px 1px -1px rgba(0,0,0, 0.12),0 1px 3px 0 rgba(0,0,0, 0.2);
+}
+
+.lvl-ground, html, body {
+  box-shadow: none;
+  background-color: var(--color-lvl0);
+}
+
+.lvl-0, section {
+  box-shadow: none;
+  background-color: var(--color-lvl1);
+}
+
+.lvl-1, #contact button {
+  box-shadow: var(--raise-2dp);
+  background-color: var(--color-lvl2);
+}
+
+.lvl-2, #contact button:hover, header {
+  box-shadow: var(--raise-4dp);
+  background-color: var(--color-lvl3);
+}
+
+link-card {
+  --link-card-bg-color: var(--primary-color-light);
+  --link-card-shadow: var(--raise-2dp);
+  --link-card-bg-color-hover: var(--primary-color-light);
+  --link-card-shadow-hover: var(--raise-4dp);
+}
+
+.lvl-3 {
+  box-shadow: var(--raise-6dp);
+  background-color: var(--color-lvl4);
+}
+
+@media (max-width: 640px) {
+  .lvl-0, section {
+    box-shadow: var(--raise-1dp);
+  }
+  .lvl-1, #contact button {
+    box-shadow: var(--raise-4dp);
+  }
+  .lvl-2, #contact button:hover, header {
+    box-shadow: var(--raise-6dp);
+  }
+
+  link-card {
+    --link-card-shadow: var(--raise-4dp);
+    --link-card-shadow-hover: var(--raise-6dp);
+  }
+
+  .lvl-3 {
+    box-shadow: var(--raise-8dp);
+  }
+}
+
+header, #contact button, #contact button:hover {
+  background-color: var(--primary-color);
+  color: var(--font-on-primary);
+}
+
+#contact button {
+  padding: 0.5em 10px;
+  border-radius: 5px;
+  border: none;
 }
 
 *,
@@ -46,10 +109,6 @@ img {
   height: auto;
 }
 
-html, body {
-  background-color: var(--color-lvl1);
-}
-
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif;
   color: var(--font-color);
@@ -59,8 +118,6 @@ body {
 header {
   text-align: left;
   padding: .5rem 1rem;
-  background-color: var(--color-lvl3);
-  border-bottom: 1px solid var(--color-lvl2);
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -69,6 +126,10 @@ header {
 header h1 {
   font-weight: 600;
   margin: 0 2rem;
+}
+
+header .spacer {
+  flex-grow:1;
 }
 
 .profile {
@@ -82,7 +143,7 @@ main {
 }
 
 section {
-  border: 1px solid var(--color-lvl2);
+  border: 1px solid var(--border-color);
   padding: 2rem;
   text-align: center;
 }
@@ -121,10 +182,8 @@ label {
   font-weight: 600;
 }
 
-select, input, textarea, #contact button {
-  border: 1px solid var(--ground-color);
+select, input, textarea {
   color: var(--font-color);
-  border-radius: 3px;
   padding: 0.5em 10px;
   font-size: inherit;
   font-family: inherit;
@@ -135,9 +194,11 @@ select, input, textarea, #contact button {
 }
 
 select, input, textarea {
+  border: 1px solid var(--input-color);
   padding: 15px 10px;
-  background: var(--ground-color);
+  background: var(--input-color);
   box-shadow: none;
+  border-radius: 3px;
 }
 
 textarea, .form-row {
@@ -159,11 +220,6 @@ textarea:required:invalid {
 #contact button {
   padding: 1rem 2rem;
   font-weight: 600;
-  background-color: var(--color-lvl2);
-}
-
-#contact button:hover {
-  background-color: var(--color-lvl3);
 }
 
 .screen-reader-text {

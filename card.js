@@ -19,14 +19,14 @@ class CardComponent extends HTMLElement {
         width: 150px;
         border-radius: 3px;
         padding: 1rem;
-        background: var(--color-lvl2);
+        background-color: var(--link-card-bg-color);
         height: 100%;
-        box-shadow: var(--shadow);
+        box-shadow: var(--link-card-shadow);
       }
 
       .container:hover {
-        background-color: var(--color-lvl3);
-        box-shadow: none;
+        background-color: var(--link-card-bg-color-hover);
+        box-shadow: var(--link-card-shadow-hover);
       }
 
       h1 {
@@ -41,7 +41,7 @@ class CardComponent extends HTMLElement {
       }
 
       a:hover {
-        color: var(--link-color);
+        /* color: var(--link-color); */
       }
 
       img {
