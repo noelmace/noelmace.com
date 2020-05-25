@@ -1,4 +1,4 @@
-import "https://unpkg.com/dark-mode-toggle";
+import "https://unpkg.com/dark-mode-toggle@0.5.2/dist/dark-mode-toggle.min.mjs";
 
 const darkModeToggle = document.querySelector('dark-mode-toggle');
 const themeColor = document.querySelector('meta[name="theme-color"]');
