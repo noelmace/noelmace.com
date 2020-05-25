@@ -9,8 +9,8 @@ Support [prefers-color-scheme](https://developer.mozilla.org/docs/Web/CSS/@media
 
 ### Light Theme
 
-[![capture](https://aprc.it/api/640x480/https://noelmace.com/)](https://noelmace.com/)
+[![capture](/docs/capture-light.png)](https://noelmace.com/)
 
 ### Dark Theme
 
-[![capture dark theme](https://aprc.it/api/640x480/https://noelmace.com/?theme=dark)](https://noelmace.com/?theme=dark)
+[![capture dark theme](/docs/capture-dark.png)](https://noelmace.com/?theme=dark)
