@@ -1,4 +1,6 @@
-import "https://unpkg.com/dark-mode-toggle";
+import './components/optimized-img.js';
+import './components/card.js';
+import 'https://unpkg.com/dark-mode-toggle@0.5.2/dist/dark-mode-toggle.min.mjs';
 
 const darkModeToggle = document.querySelector('dark-mode-toggle');
 const themeColor = document.querySelector('meta[name="theme-color"]');
@@ -11,11 +13,11 @@ const toggleTheme = (e) => {
   msTitleColor.content = primaryColor;
 };
 
-let searchParam = (new URL(document.location)).searchParams.get('theme');
+let searchParam = new URL(document.location).searchParams.get('theme');
 if (searchParam === 'dark' || searchParam === 'light') {
   console.log(darkModeToggle);
   darkModeToggle.setAttribute('mode', searchParam);
 }
 
 document.addEventListener('colorschemechange', toggleTheme);
-toggleTheme({detail: {colorScheme: searchParam || darkModeToggle.mode}});
+toggleTheme({ detail: { colorScheme: searchParam || darkModeToggle.mode } });

@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>No&euml;l Mac&eacute;</title>
 
+    <link rel="modulepreload" href="/components/optimized-img.js" />
+    <link rel="modulepreload" href="/components/card.js" />
+    <link rel="modulepreload" href="https://unpkg.com/dark-mode-toggle@0.5.2/dist/dark-mode-toggle.min.mjs" />
+    <link rel="modulepreload" href="/index.js" />
+
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
@@ -55,10 +60,12 @@
         );
       }
     </script>
+
     <link rel="stylesheet" href="/style/dark.css" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="/style/light.css" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)" />
     <link rel="stylesheet" href="/style/style.css" />
-    <script defer type="module" src="/darkmode.js"></script>
+
+    <script defer type="module" src="/index.js"></script>
   </head>
   <body>
     <header>
@@ -291,7 +298,5 @@
         </div>
       </section>
     </main>
-    <script src="/optimized-img.js"></script>
-    <script src="/card.js"></script>
   </body>
 </html>
