@@ -9,7 +9,9 @@ module.exports = {
     assert: {
       preset: 'lighthouse:no-pwa',
       assertions: {
-        'image-size-responsive': 'off'
+        'image-size-responsive': 'off',
+        'render-blocking-resources': 'off',
+        'uses-long-cache-ttl': 'off'
       },
     },
   },
