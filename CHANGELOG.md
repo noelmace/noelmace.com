@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/noelmace/noelmace.com/compare/v1.1.0...v1.2.0) (2020-05-25)
+
+
+### Features
+
+* set color scheme via get param ([47942c4](https://github.com/noelmace/noelmace.com/commit/47942c43b68b6ffb975e2549a5378acd71579095))
+
 ## [1.1.0](https://github.com/noelmace/noelmace.com/compare/v1.0.0...v1.1.0) (2020-05-25)
 
 
