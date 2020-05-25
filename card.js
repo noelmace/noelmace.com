@@ -52,11 +52,11 @@ class CardComponent extends HTMLElement {
     shadowRoot.appendChild(style);
 
     const container = document.createElement('div');
-    container.className = "container";
+    container.className = 'container';
 
     container.innerHTML = /* HTML */ `
       <a href="${this.href}" aria-label="${this.label}" target="_blank" rel="noopener noreferrer">
-        <slot><img src="${this.src}" alt="${this.alt}" /></slot>
+        <slot><optimized-img src="${this.src}" webp="${this.webp}" alt="${this.alt}"></optimized-img></slot>
         <h1>${this.cardTitle}</h1>
         <h2>${this.cardSubTitle}</h2>
       </a>
@@ -75,7 +75,11 @@ class CardComponent extends HTMLElement {
 
   // see https://github.com/noelmace/noelmace.com/commit/c8c2a33e for theme color
   get src() {
-    return this.getAttribute('src') || '/images/question-mark-white.svg';;
+    return this.getAttribute('src') || '/images/question-mark-white.svg';
+  }
+
+  get webp() {
+    return this.getAttribute('webp');
   }
 
   get colorScheme() {
