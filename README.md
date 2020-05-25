@@ -14,3 +14,9 @@ Support [prefers-color-scheme](https://developer.mozilla.org/docs/Web/CSS/@media
 ### Dark Theme
 
 [![capture dark theme](/docs/capture-dark.png)](https://noelmace.com/?theme=dark)
+
+## Performance
+
+Because this is just a minimal Web Page, some performance optimizations would be useless, or even counter-productive. This is why I prefer to keep this project as minimal as possible, avoiding any build tools whatsoever.
+
+You can still go check them in the [minification](https://github.com/noelmace/noelmace.com/tree/minification) and [modulepreload](https://github.com/noelmace/noelmace.com/tree/modulepreload) branches.
