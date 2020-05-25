@@ -6,8 +6,17 @@
   "main": "index.html",
   "scripts": {
     "start": "http-server .",
+    "preserve": "npm run build",
+    "serve": "http-server dist",
     "release": "standard-version",
-    "release:test": "standard-version --dry-run"
+    "release:test": "standard-version --dry-run",
+    "min:css": "postcss style --dir dist/style",
+    "min:html": "html-minifier-terser --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-js true --minify-css true index.html > dist/index.html",
+    "min:js": "node ./node_modules/@bazel/terser/index.js js --output dist/js -c -m toplevel,eval",
+    "cp:images": "copyfiles images/* dist",
+    "cp:favicon": "copyfiles favicon/* dist",
+    "prebuild": "rimraf dist; mkdirp dist/js",
+    "build": "concurrently \"npm:cp:images\" \"npm:cp:favicon\" \"npm:min:js\" \"npm:min:html\" \"npm:min:css\""
   },
   "repository": {
     "type": "git",
@@ -20,7 +29,16 @@
   },
   "homepage": "https://github.com/noelmace/noelmace.com#readme",
   "devDependencies": {
+    "@bazel/terser": "^1.6.1",
+    "concurrently": "^5.2.0",
+    "copyfiles": "^2.2.0",
+    "cssnano": "^4.1.10",
+    "html-minifier-terser": "^5.1.1",
     "http-server": "^0.12.3",
-    "standard-version": "^8.0.0"
+    "mkdirp": "^1.0.4",
+    "postcss-cli": "^7.1.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^8.0.0",
+    "terser": "^4.7.0"
   }
 }

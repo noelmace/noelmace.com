@@ -14,3 +14,18 @@ Support [prefers-color-scheme](https://developer.mozilla.org/docs/Web/CSS/@media
 ### Dark Theme
 
 [![capture dark theme](/docs/capture-dark.png)](https://noelmace.com/?theme=dark)
+
+## Minification
+
+Minifying would be overkill given the size of the code files. Also, lots of modern hosting solutions (e.g. Netlify) can even directly minify your resources without needing any build system.
+
+However, there still is a minification system here, as an example, just because.
+
+It uses:
+
+- [@bazel/terser](https://www.npmjs.com/package/@bazel/terser) to minify the js directory (cf. [comment](https://github.com/bazelbuild/rules_nodejs/blob/c764d5caab64db2bd7b1887e11046cd2407136b9/packages/terser/index.js#L2-L8))
+- [html-minifier-terser](https://github.com/DanielRuf/html-minifier-terser) for HTML
+- and [cssnano](http://cssnano.co) for CSS
+
+Loading differences are only perceptible below GPRS connection performance (~2s with 1/5 of GPRS, i.e. with DL 10kb/s UP 4kb/s Latency 100ms). When I said overkill...
+Run `npm start` alongside `npm run serve` to see by yourself.
