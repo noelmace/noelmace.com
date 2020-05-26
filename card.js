@@ -22,6 +22,7 @@ class CardComponent extends HTMLElement {
         background-color: var(--link-card-bg-color);
         height: 100%;
         box-shadow: var(--link-card-shadow);
+        transition: var(--raise-transition);
       }
 
       .container:hover {

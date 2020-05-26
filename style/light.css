@@ -12,4 +12,7 @@
   --link-color: hsl(209.8,52.6%,51.2%);
   --font-color: #000;
   --font-on-primary: #fff;
+  --link-card-bg-color: var(--primary-color-light);
+  --link-card-bg-color-hover: var(--primary-color-light);
+  --button-hover-bg-color: var(--primary-color);
 }

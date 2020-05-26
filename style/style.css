@@ -7,6 +7,7 @@
   --raise-6dp: 0 3px 5px -1px rgba(0,0,0,.2),0 6px 10px 0 rgba(0,0,0,.14),0 1px 18px 0 rgba(0,0,0,.12);
   --raise-8dp: 0 5px 5px -3px rgba(0,0,0,.2),0 8px 10px 1px rgba(0,0,0,.14),0 3px 14px 2px rgba(0,0,0,.12);
   --shadow: 0 1px 1px 0 rgba(0,0,0, 0.14),0 2px 1px -1px rgba(0,0,0, 0.12),0 1px 3px 0 rgba(0,0,0, 0.2);
+  --raise-transition: box-shadow 200ms, background-color 200ms;
 }
 
 link-card svg path {
@@ -26,6 +27,7 @@ link-card svg path {
 .lvl-1, #contact button {
   box-shadow: var(--raise-2dp);
   background-color: var(--color-lvl2);
+  transition: var(--raise-transition);
 }
 
 .lvl-2, #contact button:hover, header {
@@ -33,10 +35,12 @@ link-card svg path {
   background-color: var(--color-lvl3);
 }
 
+.lvl-2, header {
+  background-color: var(--color-lvl3);
+}
+
 link-card {
-  --link-card-bg-color: var(--primary-color-light);
   --link-card-shadow: var(--raise-2dp);
-  --link-card-bg-color-hover: var(--primary-color-light);
   --link-card-shadow-hover: var(--raise-4dp);
 }
 
@@ -66,7 +70,7 @@ link-card {
   }
 }
 
-header, #contact button, #contact button:hover {
+header, #contact button {
   background-color: var(--primary-color);
   color: var(--font-on-primary);
 }
@@ -75,6 +79,10 @@ header, #contact button, #contact button:hover {
   padding: 0.5em 10px;
   border-radius: 5px;
   border: none;
+}
+
+#contact button:hover {
+  background-color: var(--button-hover-bg-color);
 }
 
 *,
@@ -274,5 +282,33 @@ textarea:required:invalid {
   }
 }
 
+button {
+  position: relative;
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+}
+
+button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background-image: radial-gradient(circle, #fff 10%, transparent 10%);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  transform: scale(10, 10);
+  opacity: 0;
+  transition: transform 200ms, opacity 1s;
+}
+
+button:active:after {
+  transform: scale(0, 0);
+  opacity: .3;
+  transition: 0s;
+}
 
 
