@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/noelmace/noelmace.com/compare/v1.2.0...v1.2.1) (2020-05-26)
+
+
+### Bug Fixes
+
+* dark-mode-toggle connection ([7ba4fb3](https://github.com/noelmace/noelmace.com/commit/7ba4fb362e80573924e6950419e6ca0be8859c96))
+* smooth user interactions ([13bf45b](https://github.com/noelmace/noelmace.com/commit/13bf45bc7942d0f0242cf1991f06059937acf583))
+
 ## [1.2.0](https://github.com/noelmace/noelmace.com/compare/v1.1.0...v1.2.0) (2020-05-25)
 
 

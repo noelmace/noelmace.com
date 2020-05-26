@@ -1,7 +1,7 @@
 {
   "name": "noelmace.com",
   "private": true,
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Noël Macé's Personal Web Page",
   "main": "index.html",
   "scripts": {
