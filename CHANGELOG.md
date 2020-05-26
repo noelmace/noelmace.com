@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.2](https://github.com/noelmace/noelmace.com/compare/v1.2.1...v1.2.2) (2020-05-26)
+
+
+### Bug Fixes
+
+* message for unsupported browsers ([6fb5282](https://github.com/noelmace/noelmace.com/commit/6fb5282651c97038b6258474e1e1125a16f32a96))
+
 ### [1.2.1](https://github.com/noelmace/noelmace.com/compare/v1.2.0...v1.2.1) (2020-05-26)
 
 
