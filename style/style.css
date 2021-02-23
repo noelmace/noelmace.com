@@ -10,7 +10,7 @@
   --raise-transition: box-shadow 200ms, background-color 200ms;
 }
 
-link-card svg path {
+link-card svg:not(.preserve-colors) path {
   fill: var(--link-card-fill-color, #000);
 }
 

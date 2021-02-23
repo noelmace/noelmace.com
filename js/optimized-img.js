@@ -7,17 +7,6 @@ class OptimizedImgComponent extends HTMLElement {
       jpeg: 'image/jpeg',
       jpg: 'image/jpeg',
     };
-
-    this.innerHTML =
-      this.webp && Object.keys(this._supportedExtensions).includes(this.srcExtension)
-        ? `
-      <picture>
-        <source srcset="${this.webp}" type="image/webp" />
-        <source srcset="${this.src}" type="${this.srcType}" />
-        <img src="${this.src}" alt="${this.alt}" />
-      </picture>
-    `
-        : `<img src=${this.src} alt="${this.alt} aria-label="${this.ariaLabel}" />`;
   }
 
   get src() {
@@ -43,6 +32,19 @@ class OptimizedImgComponent extends HTMLElement {
   get srcType() {
     const match = Object.entries(this._supportedExtensions).find(([ext, type]) => this.srcExtension === ext);
     return match && match[1];
+  }
+
+  connectedCallback() {
+    this.innerHTML =
+      this.webp && Object.keys(this._supportedExtensions).includes(this.srcExtension)
+        ? `
+      <picture>
+        <source srcset="${this.webp}" type="image/webp" />
+        <source srcset="${this.src}" type="${this.srcType}" />
+        <img src="${this.src}" alt="${this.alt}" />
+      </picture>
+    `
+        : `<img src=${this.src} alt="${this.alt} aria-label="${this.ariaLabel}" />`;
   }
 }
 
